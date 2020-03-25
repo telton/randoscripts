@@ -43,6 +43,7 @@ def merge_pdfs(dirname, output):
 
 
 if __name__ == '__main__':
-    notes_dir = os.environ.get('MERGE_PDFS_DIRECTORY')
-    convert_md_to_pdf(notes_dir)
-    merge_pdfs(notes_dir, 'notes.pdf')
+    directory = os.environ.get('MERGE_PDFS_DIRECTORY')
+    filename = os.environ.get('MERGE_PDFS_FILENAME')
+    convert_md_to_pdf(directory)
+    merge_pdfs(directory, filename)
